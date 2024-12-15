@@ -68,7 +68,7 @@ spec:
             secretKeyRef:
               name: wordpress-secrets
               key: MYSQL_PASSWORD
-        ports
+        ports :
         - containerPort: 3306
           name: mysql
         volumeMounts:

@@ -75,9 +75,8 @@ spec:
           valueFrom:
             secretKeyRef:
               name: wordpress-secrets
-              key: password
+              key: MYSQL_PASSWORD
         - name: WORDPRESS_DB_USER
-          - name: MYSQL_USER
           valueFrom:
             secretKeyRef:
               name: wordpress-secrets
