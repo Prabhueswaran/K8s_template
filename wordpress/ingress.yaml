@@ -2,12 +2,16 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: wordpress-ingress
+  namespace: wp
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
+    - host: myapp.local
     - http:
         paths:
           - pathType: Prefix
-            path: /wordpress
+            path: /
             backend:
               service:
                 name: wordpress

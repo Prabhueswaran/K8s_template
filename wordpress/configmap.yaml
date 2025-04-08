@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: wordpress-db-config
-  namespace: devops
+  namespace: wp
   labels:
     app: wordpress
 data:
